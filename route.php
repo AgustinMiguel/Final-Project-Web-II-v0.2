@@ -1,16 +1,33 @@
 <?php
-  require_once "controller/TpeController.php";
-  $controller = new TpeController();
-  $partesURL = explode ("/", $_GET['action']);
-  if($partesURL[0] === ''){
-    $controller->TablaEquipos();
-  }else {
-    if ($partesURL[0] == 'agregar') {
-      $controller->InsertarEquipo();
-      } elseif($partesURL[0] === 'borrar') {
-          $controller->BorrarEquipo($partesURL[1]);
+require_once "configApp/ConfigApp.php";
+require_once "controller\TpeController.php";
+function parseURL($url)
+{
+  $urlExploded = explode('/', $url);
+  $arrayReturn[ConfigApp::$ACTION] = $urlExploded[0];
+  #borrar/1/2/3/4
+  $arrayReturn[ConfigApp::$PARAMS] = isset($urlExploded[1]) ? array_slice($urlExploded,1) : null;
+  return $arrayReturn;
+}
+if(isset($_GET['action'])){
+   #$urlData[ACTION] = borrar
+   #$urlData[PARAMS] = [1,2,3,4]
+    $urlData = parseURL($_GET['action']);
+    $action = $urlData[ConfigApp::$ACTION]; //home
+    if(array_key_exists($action,ConfigApp::$ACTIONS)){
+        $params = $urlData[ConfigApp::$PARAMS];
+        $action = explode('#',ConfigApp::$ACTIONS[$action]); //Array[0] -> TareasController [1] -> BorrarTarea
+        $controller =  new $action[0]();
+        $metodo = $action[1];
+        if(isset($params) &&  $params != null){
+            echo $controller->$metodo($params);
         }
-        elseif($partesURL[0] === 'registro'){
-              //  loadRegistro();
+        else{
+            echo $controller->$metodo();
         }
-  }
+    }else{
+      $controller =  new TpeController();
+      echo $controller->TablaEquipos();
+    }
+}
+ ?>
