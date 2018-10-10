@@ -23,14 +23,14 @@ class TpeModel
 
   }
 function InsertarEquipo($equipo, $p_ganados, $p_perdidos){
-
+  $sentencia = $this->db->prepare("INSERT INTO equipos(nombre_equipo, partidos_ganados, partidos_perdidos) VALUES(?,?,?)");
+  $sentencia->execute(array($equipo, $p_ganados, $p_perdidos));
 
 }
 function BorrarEquipo($id_equipo){
-
-
-}
-
+  $sentencia = $this->db->prepare( "delete from tarea where id_equipo=?");
+    $sentencia->execute(array($id_equipo));
+  }
 }
 
 

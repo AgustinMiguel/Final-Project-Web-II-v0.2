@@ -50,12 +50,33 @@
 
             <?php
                 foreach($Equipos as $equipo){
-                    echo '<li class="list-group-item">'.$equipo['nombre_equipo'].': '.$equipo['partidos_ganados'].': '.$equipo['partidos_perdidos'].'</li>';
+                    echo '<li class="list-group-item">'.$equipo['nombre_equipo'].': '.$equipo['partidos_ganados'].': '.$equipo['partidos_perdidos'].'<a href="borrar/'.$equipo['id_equipo'].'">BORRAR</a></li>';
                 }
              ?>
-
           </ul>
         </div>
+
+        <div class="container">
+          <br>
+          <br>
+          <h2>Equipo</h2>
+          <form method="post" action="agregar">
+            <div class="form-group">
+              <label for="equipoForm">Nombre Equipo</label>
+              <input type="text" class="form-control" id="equipoForm" name="equipoForm">
+            </div>
+            <div class="form-group">
+              <label for="ganadosForm">Partidos ganados</label>
+              <input type="text" class="form-control" id="ganadosForm" name="ganadosForm">
+            </div>
+            <div class="form-group">
+              <label for="perdidosForm">Partidos perdidos</label>
+              <input type="text" class="form-control" id="perdidosForm" name="perdidosForm">
+            </div>
+            <button type="submit" class="btn btn-primary">Agregar Equipo</button>
+          </form>
+        </div>
+
 
       </header>
       <div class="container-fluid">

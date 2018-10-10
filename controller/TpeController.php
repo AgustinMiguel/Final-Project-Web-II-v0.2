@@ -25,14 +25,17 @@ class TpeController
   }
 
   function InsertarEquipo(){
-    $equipo=$_POST["tituloform"];
-    $p_ganados =$_POST["ganadosform"];
-    $p_perdidos=$POST["perdidosform"];
+    $equipo=$_POST["equipoForm"];
+    $p_ganados =$_POST["ganadosForm"];
+    $p_perdidos=$_POST["perdidosForm"];
     $this->model->InsertarEquipo($equipo, $p_ganados, $p_perdidos);
-    header("");
+    header("Location: http://".$_SERVER["SERVER_NAME"] . dirname($_SERVER["PHP_SELF"]));
   }
-  function BorrarEquipo($id_equipo){
-    $this->model->Borrar($id_equipo);
+
+  function BorrarEquipo($param){
+    $this->model->BorrarEquipo($param[0]);
+    header("Location: http://".$_SERVER["SERVER_NAME"] . dirname($_SERVER["PHP_SELF"]));
+
   }
 }
 ?>
