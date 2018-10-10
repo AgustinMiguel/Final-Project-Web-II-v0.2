@@ -31,5 +31,6 @@ function BorrarEquipo($id_equipo){
   $sentencia = $this->db->prepare( "delete from equipos where id_equipo=?");
     $sentencia->execute(array($id_equipo));
   }
+  
 }
 ?>
