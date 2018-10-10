@@ -5,8 +5,8 @@ class TpeController
 {
   private $view;
   private $model;
-  private $Titulo = "Lista Equipos";
-  private $Tarea;
+  private $Titulo = "NBA";
+  private $Equipos;
 
   function __construct(){
     $this->view = new TpeView();
@@ -15,12 +15,13 @@ class TpeController
   }
 
   function Home(){
-    $this->view->Home();
+    $Equipos = $this->model->GetEquipos();
+    $this->view->Home($this->Titulo, $Equipos);
   }
 
   function TablaEquipos(){
     $Equipos = $this->model->GetEquipos();
-    $this->view->Home();
+    $this->view->Tabla($this->Titulo, $Equipos);
   }
 
   function InsertarEquipo(){

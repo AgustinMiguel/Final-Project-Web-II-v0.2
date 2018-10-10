@@ -7,14 +7,17 @@
 
 
 
-    function Home()
+    function Tabla($Titulo, $Equipos)
     {
       ?>
       <!DOCTYPE html>
       <html lang="en" dir="ltr">
       <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet" href="../CSS/estilos.css" type="text/css">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <title><?php echo $Titulo ?></title>
       </head>
         <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-primary">
@@ -40,6 +43,20 @@
             </ul>
           </div>
         </nav>
+        <h1><?php echo $Titulo ?></h1>
+
+        <div class="container">
+          <ul class="list-group">
+
+            <?php
+                foreach($Equipos as $equipo){
+                    echo '<li class="list-group-item">'.$equipo['nombre_equipo'].': '.$equipo['partidos_ganados'].': '.$equipo['partidos_perdidos'].'</li>';
+                }
+             ?>
+
+          </ul>
+        </div>
+
       </header>
       <div class="container-fluid">
       </div>

@@ -2,7 +2,7 @@
 require_once "controller/TpeController.php";
 $controller = new TpeController();
 if($_GET['action'] == ''){
-  $controller->home();
+  $controller->TablaEquipos();
 }
 else{
   $partesURL = explode ("/", $_GET['action']);
