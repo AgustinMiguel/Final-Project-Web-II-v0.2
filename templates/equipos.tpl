@@ -3,13 +3,26 @@
   <h1>{$Titulo}</h1>
 
   <div class="container-fluid">
-    <ul class="list-group">
-
+    <table class="table table-hover">
+      <thead class="thead-dark">
+          <tr>
+                  <th scope="col">Equipo</th>
+                  <th scope="col">PG</th>
+                  <th scope="col">PP</th>
+                  <th scope="col"> </th>
+            </tr>
+          </thead>
+        <tbody class="contenedor-tabla" >
           {foreach from=$Equipos item=equipo}
-              <li class="list-group-item">{$equipo['nombre_equipo']}: {$equipo['partidos_ganados']}: {$equipo['partidos_perdidos']}<a href="borrar/{$equipo['id_equipo']}">BORRAR</a></li>
-
-       {/foreach}
-    </ul>
+            <tr>
+                  <th scope="col">{$equipo['nombre_equipo']}</th>
+                  <th scope="col">{$equipo['partidos_ganados']}</th>
+                  <th scope="col">{$equipo['partidos_perdidos']}</th>
+                  <th scope="col"> <a href="borrar/{$equipo['id_equipo']}">BORRAR</th>
+            </tr>
+        {/foreach}
+      </tbody>
+    </table>
   </div>
 
   <div class="container-fluid">

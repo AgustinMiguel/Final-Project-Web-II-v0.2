@@ -15,8 +15,7 @@ class TpeController
   }
 
   function Home(){
-    $Equipos = $this->model->GetEquipos();
-    $this->view->Home($this->Titulo, $Equipos);
+    $this->view->Home($this->Titulo);
   }
 
   function TablaEquipos(){

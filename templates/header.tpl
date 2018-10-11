@@ -17,10 +17,10 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link" href="#" id="botonHome">Home</a>
+          <a class="nav-link" href="home.tpl" id="botonHome">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#" id="botonTabla">Regular Season</a>
+          <a class="nav-link" href="equipos.tpl" id="botonTabla">Regular Season</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#" id="botonLista">All-Star</a>

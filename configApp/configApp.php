@@ -7,7 +7,8 @@ class ConfigApp
     public static $ACTION = 'action';
     public static $PARAMS = 'params';
     public static $ACTIONS = [
-      ''=> 'TpeController#TablaEquipos',
+      ''=> 'TpeController#Home',
+      'tabla'=>'TpeController#TablaEquipos',
       'borrar'=> 'TpeController#BorrarEquipo',
       'agregar'=>'TpeController#InsertarEquipo'
     ];
