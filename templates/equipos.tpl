@@ -1,7 +1,5 @@
 {include file="header.tpl"}
   <body>
-  <h1>{$Titulo}</h1>
-
   <div class="container-fluid">
     <table class="table table-hover">
       <thead class="thead-dark">
