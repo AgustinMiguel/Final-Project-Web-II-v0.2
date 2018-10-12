@@ -2,7 +2,7 @@
     <h1>{$Titulo}</h1>
     <div class="container-fluid">
       <h2>Formulario</h2>
-      <form method="post" action="{$home}/guardarEditar">
+      <form method="post" action="{$home}/update">
           <input type="hidden" class="form-control" id="idForm" name="idForm" value="{$Equipo["id_equipo"]}">
         <div class="form-group">
           <label for="tituloForm">Nombre</label>

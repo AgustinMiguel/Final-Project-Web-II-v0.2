@@ -32,7 +32,7 @@ require_once('libs/Smarty.class.php');
       $smarty->assign('Titulo',$Titulo);
       $smarty->display('templates/registro.tpl');
     }
-    function MostrarEditarEquipo($Titulo, $Equipo){
+    function UpdateEquipo($Titulo, $Equipo){
       $smarty = new Smarty();
       $smarty->assign('Titulo',$Titulo);
       $smarty->assign('Equipo',$Equipo);

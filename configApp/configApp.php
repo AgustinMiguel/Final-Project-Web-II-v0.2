@@ -20,7 +20,7 @@ class ConfigApp
       'lista' => 'TpeController#CargarLista',
       'registro'=> 'TpeController#CargarRegistro',
       'editar' => 'TpeController#EditarEquipo',
-      'guardarEditar' => 'TpeController#GuardarEditarEquipo',
+      'update' => 'TpeController#UpdateEquipo',
     ];
 }
  ?>

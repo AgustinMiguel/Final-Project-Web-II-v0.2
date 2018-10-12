@@ -45,15 +45,15 @@ class TpeController
 function EditarEquipo($param){
     $id_equipo = $param[0];
     $Equipo = $this->model->GetEquipo($id_equipo);
-    $this->view->MostrarEditarEquipo("Editar Equipo", $Equipo);
+    $this->view->UpdateEquipo("Editar Equipo", $Equipo);
 }
-function GuardarEditarEquipo(){
+function UpdateEquipo(){
     $id_equipo = $_POST["idForm"];
     $nombre_equipo = $_POST["nombreForm"];
     $partidos_ganados = $_POST["pgForm"];
     $partidos_perdidos = $_POST["ppForm"];
-    $this->model->GuardarEditarEquipo($nombre_equipo, $partidos_ganados, $partidos_perdidos, $id_equipo);
-    header("Location: http://".$_SERVER["SERVER_NAME"] . dirname($_SERVER["PHP_SELF"].'/guardarEditar'));
+    $this->model->UpdateEquipo($nombre_equipo, $partidos_ganados, $partidos_perdidos, $id_equipo);
+    header("Location: http://".$_SERVER["SERVER_NAME"] . dirname($_SERVER["PHP_SELF"].'/Update'));
   }
 
 }

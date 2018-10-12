@@ -36,7 +36,7 @@ function BorrarEquipo($id_equipo){
     $sentencia->execute(array($id));
     return $sentencia->fetch(PDO::FETCH_ASSOC);
 }
-  function GuardarEditarEquipo($nombre_equipo, $partidos_ganados, $partidos_perdidos, $id_equipo){
+  function UpdateEquipo($nombre_equipo, $partidos_ganados, $partidos_perdidos, $id_equipo){
   $sentencia = $this->db->prepare( "update equipos set nombre_equipo = ?, partidos_ganados = ?, partidos_perdidos = ? where id_equipo=?");
   $sentencia->execute(array($nombre_equipo, $partidos_ganados, $partidos_perdidos, $id_equipo));
 
