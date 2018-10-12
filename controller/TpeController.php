@@ -11,7 +11,7 @@ class TpeController
   function __construct(){
     $this->view = new TpeView();
     $this->model = new TpeModel();
-    $this->Titulo = "Lista controlador";
+    $this->Titulo = "NBA";
   }
 
   function Home(){
@@ -28,7 +28,7 @@ class TpeController
     $p_ganados =$_POST["ganadosForm"];
     $p_perdidos=$_POST["perdidosForm"];
     $this->model->InsertarEquipo($equipo, $p_ganados, $p_perdidos);
-    header("Location: http://".$_SERVER["SERVER_NAME"] . dirname($_SERVER["PHP_SELF"]));
+    header("Location: http://".$_SERVER["SERVER_NAME"] . dirname($_SERVER["PHP_SELF"])."/equipos");
   }
 
   function BorrarEquipo($param){
@@ -42,5 +42,18 @@ class TpeController
   function CargarRegistro(){
     $this->view->Registro($this->Titulo);
   }
+function EditarEquipo($param){
+    $id_equipo = $param[0];
+    $Equipo = $this->model->GetEquipo($id_equipo);
+    $this->view->MostrarEditarEquipo("Editar Equipo", $Equipo);
 }
-?>
+function GuardarEditarEquipo(){
+    $id_equipo = $_POST["idForm"];
+    $nombre_equipo = $_POST["nombreForm"];
+    $partidos_ganados = $_POST["pgForm"];
+    $partidos_perdidos = $_POST["ppForm"];
+    $this->model->GuardarEditarEquipo($nombre_equipo, $partidos_ganados, $partidos_perdidos, $id_equipo);
+    header("Location: http://".$_SERVER["SERVER_NAME"] . dirname($_SERVER["PHP_SELF"].'/guardarEditar'));
+  }
+
+}

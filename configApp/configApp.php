@@ -5,7 +5,7 @@ define('LOGOUT', 'Location: http://'.$_SERVER["SERVER_NAME"] . dirname($_SERVER[
 define('LISTA', 'Location: http://'.$_SERVER["SERVER_NAME"] . dirname($_SERVER["PHP_SELF"]). '/lista');
 define('TABLA', 'Location: http://'.$_SERVER["SERVER_NAME"] . dirname($_SERVER["PHP_SELF"]). '/tabla');
 define('REGISTRO', 'Location: http://'.$_SERVER["SERVER_NAME"] . dirname($_SERVER["PHP_SELF"]). '/registro');
-
+define('EDITAR', 'Location: http://'.$_SERVER["SERVER_NAME"] . dirname($_SERVER["PHP_SELF"]). '/editarequipo');
 
 class ConfigApp
 {
@@ -19,6 +19,8 @@ class ConfigApp
       'agregar'=>'TpeController#InsertarEquipo',
       'lista' => 'TpeController#CargarLista',
       'registro'=> 'TpeController#CargarRegistro',
+      'editar' => 'TpeController#EditarEquipo',
+      'guardarEditar' => 'TpeController#GuardarEditarEquipo',
     ];
 }
  ?>

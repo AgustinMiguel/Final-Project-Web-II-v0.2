@@ -32,4 +32,12 @@ require_once('libs/Smarty.class.php');
       $smarty->assign('Titulo',$Titulo);
       $smarty->display('templates/registro.tpl');
     }
+    function MostrarEditarEquipo($Titulo, $Equipo){
+      $smarty = new Smarty();
+      $smarty->assign('Titulo',$Titulo);
+      $smarty->assign('Equipo',$Equipo);
+      $smarty->assign('home',"http://".$_SERVER["SERVER_NAME"] . dirname($_SERVER["PHP_SELF"]));
+      $smarty->display('templates/editarEquipo.tpl');
+  }
+
   }

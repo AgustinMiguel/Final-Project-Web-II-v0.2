@@ -8,6 +8,8 @@
                   <th scope="col">PG</th>
                   <th scope="col">PP</th>
                   <th scope="col"> </th>
+                  <th scope="col"> </th>
+
             </tr>
           </thead>
         <tbody class="contenedor-tabla" >
@@ -17,6 +19,8 @@
                   <th scope="col">{$equipo['partidos_ganados']}</th>
                   <th scope="col">{$equipo['partidos_perdidos']}</th>
                   <th scope="col"> <a href="borrar/{$equipo['id_equipo']}">BORRAR</th>
+                  <th scope="col"> <a href="editar/{$equipo['id_equipo']}">EDITAR</th>
+
             </tr>
         {/foreach}
       </tbody>

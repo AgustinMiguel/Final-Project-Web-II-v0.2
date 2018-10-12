@@ -31,6 +31,14 @@ function BorrarEquipo($id_equipo){
   $sentencia = $this->db->prepare( "delete from equipos where id_equipo=?");
     $sentencia->execute(array($id_equipo));
   }
-  
+  function GetEquipo($id){
+    $sentencia = $this->db->prepare( "select * from equipos where id_equipo=?");
+    $sentencia->execute(array($id));
+    return $sentencia->fetch(PDO::FETCH_ASSOC);
 }
-?>
+  function GuardarEditarEquipo($nombre_equipo, $partidos_ganados, $partidos_perdidos, $id_equipo){
+  $sentencia = $this->db->prepare( "update equipos set nombre_equipo = ?, partidos_ganados = ?, partidos_perdidos = ? where id_equipo=?");
+  $sentencia->execute(array($nombre_equipo, $partidos_ganados, $partidos_perdidos, $id_equipo));
+
+}
+}
