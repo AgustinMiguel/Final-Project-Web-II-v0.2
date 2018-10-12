@@ -53,3 +53,4 @@
   <script src="js/our.js" charset="utf-8"></script>
 </body>
 </html>
+{include file='footer.tpl'}

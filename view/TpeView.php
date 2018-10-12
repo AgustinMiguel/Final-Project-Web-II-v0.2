@@ -20,4 +20,16 @@ require_once('libs/Smarty.class.php');
       $smarty->display('templates/equipos.tpl');
 
     }
+    function Lista($Titulo)
+    {
+      $smarty = new Smarty();
+      $smarty->assign('Titulo',$Titulo);
+      $smarty->display('templates/lista.tpl');
+    }
+    function Registro($Titulo)
+    {
+      $smarty = new Smarty();
+      $smarty->assign('Titulo',$Titulo);
+      $smarty->display('templates/registro.tpl');
+    }
   }

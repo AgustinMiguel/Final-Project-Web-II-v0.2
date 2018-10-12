@@ -36,5 +36,11 @@ class TpeController
     header("Location: http://".$_SERVER["SERVER_NAME"] . dirname($_SERVER["PHP_SELF"]));
 
   }
+  function CargarLista(){
+    $this->view->Lista($this->Titulo);
+  }
+  function CargarRegistro(){
+    $this->view->Registro($this->Titulo);
+  }
 }
 ?>
