@@ -23,7 +23,7 @@
           <a class="nav-link" href="equipos" id="botonTabla">Regular Season</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="lista" id="botonLista">All-Star</a>
+          <a class="nav-link" href="jugadores" id="botonLista">All-Star</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="registro" id="botonRegistro">Register</a>

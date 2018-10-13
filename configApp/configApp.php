@@ -16,9 +16,7 @@ class ConfigApp
     public static $PARAMS = 'params';
     public static $ACTIONS = [
       '' => 'TpeController#Home',
-      'home' =>'TpeCont
-      o
-       ler#Home',
+      'home' =>'TpeController#Home',
       'tabla'=>'TpeController#TablaEquipos',
       'borrar'=> 'TpeController#BorrarEquipo',
       'agregar'=>'TpeController#InsertarEquipo',
@@ -29,7 +27,8 @@ class ConfigApp
       'jugadores' => 'TpeController#TablaJugadores',
       'agregarJugador' => 'TpeController#InsertarJugador',
       'borrarJugador' => 'TpeController#BorrarJugador',
-
+      'editarJugador' => 'TpeController#EditarJugador',
+      'updateJugador' => 'TpeController#UpdateJugador',
     ];
 }
  ?>

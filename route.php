@@ -1,6 +1,6 @@
 <?php
 require_once "configApp/ConfigApp.php";
-require_once "controller\TpeController.php";
+require_once "controller/TpeController.php";
 
 function parseURL($url)
 {
