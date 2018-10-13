@@ -6,6 +6,9 @@ define('LISTA', 'Location: http://'.$_SERVER["SERVER_NAME"] . dirname($_SERVER["
 define('TABLA', 'Location: http://'.$_SERVER["SERVER_NAME"] . dirname($_SERVER["PHP_SELF"]). '/tabla');
 define('REGISTRO', 'Location: http://'.$_SERVER["SERVER_NAME"] . dirname($_SERVER["PHP_SELF"]). '/registro');
 define('EDITAR', 'Location: http://'.$_SERVER["SERVER_NAME"] . dirname($_SERVER["PHP_SELF"]). '/editarequipo');
+define('BORRARJUGADOR', 'Location: http://'.$_SERVER["SERVER_NAME"] . dirname($_SERVER["PHP_SELF"]). '/borrarjugador');
+define('JUGADORES', 'Location: http://'.$_SERVER["SERVER_NAME"] . dirname($_SERVER["PHP_SELF"]). '/jugadores');
+
 
 class ConfigApp
 {
@@ -13,7 +16,9 @@ class ConfigApp
     public static $PARAMS = 'params';
     public static $ACTIONS = [
       '' => 'TpeController#Home',
-      'home' =>'TpeController#Home',
+      'home' =>'TpeCont
+      o
+       ler#Home',
       'tabla'=>'TpeController#TablaEquipos',
       'borrar'=> 'TpeController#BorrarEquipo',
       'agregar'=>'TpeController#InsertarEquipo',
@@ -21,6 +26,10 @@ class ConfigApp
       'registro'=> 'TpeController#CargarRegistro',
       'editar' => 'TpeController#EditarEquipo',
       'update' => 'TpeController#UpdateEquipo',
+      'jugadores' => 'TpeController#TablaJugadores',
+      'agregarJugador' => 'TpeController#InsertarJugador',
+      'borrarJugador' => 'TpeController#BorrarJugador',
+
     ];
 }
  ?>
