@@ -1,4 +1,4 @@
-{include file="header.tpl"}
+{include file="headerTemporal.tpl"}
   <body>
   <div class="container-fluid">
     <table class="table table-hover">
