@@ -54,5 +54,13 @@ class TpeView
     $smarty->display('templates/editarJugador.tpl');
 
   }
+  function MostrarJugador($Titulo ,$Jugador)
+  {
+      $smarty = new Smarty();
+      $smarty->assign('Titulo',$Titulo);
+      $smarty->assign('Jugador',$Jugador);
+      $smarty->display('templates/verJugador.tpl');
+      $smarty->assign('home',"http://".$_SERVER["SERVER_NAME"] . dirname($_SERVER["PHP_SELF"]));
 
+  }
 }

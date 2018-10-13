@@ -8,6 +8,8 @@ define('REGISTRO', 'Location: http://'.$_SERVER["SERVER_NAME"] . dirname($_SERVE
 define('EDITAR', 'Location: http://'.$_SERVER["SERVER_NAME"] . dirname($_SERVER["PHP_SELF"]). '/editarequipo');
 define('BORRARJUGADOR', 'Location: http://'.$_SERVER["SERVER_NAME"] . dirname($_SERVER["PHP_SELF"]). '/borrarjugador');
 define('JUGADORES', 'Location: http://'.$_SERVER["SERVER_NAME"] . dirname($_SERVER["PHP_SELF"]). '/jugadores');
+define('VERJUGADOR', 'Location: http://'.$_SERVER["SERVER_NAME"] . dirname($_SERVER["PHP_SELF"]). '/verJugador');
+
 
 
 class ConfigApp
@@ -29,6 +31,7 @@ class ConfigApp
       'borrarJugador' => 'TpeController#BorrarJugador',
       'editarJugador' => 'TpeController#EditarJugador',
       'updateJugador' => 'TpeController#UpdateJugador',
+      'verJugador' => 'TpeController#VerJugador',
     ];
 }
  ?>

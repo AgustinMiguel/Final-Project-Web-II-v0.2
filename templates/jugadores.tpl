@@ -7,9 +7,10 @@
                   <th scope="col">Nombre</th>
                   <th scope="col">Procedencia</th>
                   <th scope="col">Id equipo</th>
+                  <th scope="col">Id jugador </th>
                   <th scope="col"> </th>
                   <th scope="col"> </th>
-
+                  <th scope="col"> </th>
             </tr>
           </thead>
         <tbody class="contenedor-tabla" >
@@ -18,9 +19,10 @@
                   <th scope="col">{$jugador['nombre_jugador']}</th>
                   <th scope="col">{$jugador['procedencia']}</th>
                   <th scope="col">{$jugador['id_jugador']}</th>
+                  <th scope="col">{$jugador['id_equipo']}</th>
                   <th scope="col"> <a href="borrarJugador/{$jugador['id_jugador']}">BORRAR</th>
                   <th scope="col"> <a href="editarJugador/{$jugador['id_jugador']}">EDITAR</th>
-                  <th scope="col"> <a href="verJugador/{$jugador['id_jugador']}">Ver más</th>
+                  <th scope="col"> <a href="verJugador/{$jugador['id_jugador']}">VER MAS</th>
 
 
             </tr>
