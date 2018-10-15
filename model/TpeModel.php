@@ -60,5 +60,23 @@ class TpeModel
   function UpdateJugador($nombre_jugador, $procedencia, $id_jugador){
     $sentencia = $this->db->prepare( "update jugadores set nombre_jugador = ?, procedencia = ? where id_jugador=?");
     $sentencia->execute(array($nombre_jugador, $procedencia, $id_jugador));
-}
+  }
+  function VerEquipo($id_jugador)
+  {
+    $sentencia = $this->db->prepare( "select * from jugadores where id_equipo=?");
+    $sentencia->execute(array($id));
+    return $sentencia->fetch(PDO::FETCH_ASSOC);
+  }
+  function prueba($id)
+  {
+    $sentencia = $this->db->prepare("select nombre_equipo FROM jugadores inner join equipos on jugadores.id_equipo = equipos.id_equipo");
+    $sentencia->execute(array($id));
+    return $sentencia->fetch(PDO::FETCH_ASSOC);
+  }
+  function prueba2()
+  {
+    $sentencia = $this->db->prepare("select nombre_equipo FROM jugadores inner join equipos on jugadores.id_equipo = equipos.id_equipo");
+    $sentencia->execute();
+    return $sentencia->fetch(PDO::FETCH_ASSOC);
+  }
 }

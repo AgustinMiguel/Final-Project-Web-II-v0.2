@@ -1,4 +1,4 @@
-{include file="header.tpl"}
+{include file="headertemporal.tpl"}
   <body>
   <div class="container-fluid">
     <table class="table table-hover">
@@ -6,8 +6,8 @@
           <tr>
                   <th scope="col">Nombre</th>
                   <th scope="col">Procedencia</th>
-                  <th scope="col">Id equipo</th>
-                  <th scope="col">Id jugador </th>
+                  <th scope="col">Id jugador</th>
+                  <th scope="col">Equipo </th>
                   <th scope="col"> </th>
                   <th scope="col"> </th>
                   <th scope="col"> </th>
@@ -18,7 +18,7 @@
                   <th scope="col">{$Jugador['nombre_jugador']}</th>
                   <th scope="col">{$Jugador['procedencia']}</th>
                   <th scope="col">{$Jugador['id_jugador']}</th>
-                  <th scope="col">{$Jugador['id_equipo']}</th>
+                  <th scope="col">{$Equipo['nombre_equipo']}</th>
             </tr>
       </tbody>
     </table>

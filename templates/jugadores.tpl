@@ -6,8 +6,8 @@
           <tr>
                   <th scope="col">Nombre</th>
                   <th scope="col">Procedencia</th>
-                  <th scope="col">Id equipo</th>
-                  <th scope="col">Id jugador </th>
+                  <th scope="col">Id jugador</th>
+                  <th scope="col">Id equipo </th>
                   <th scope="col"> </th>
                   <th scope="col"> </th>
                   <th scope="col"> </th>
