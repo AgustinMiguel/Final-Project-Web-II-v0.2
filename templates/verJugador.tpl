@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 {include file="headertemporal.tpl"}
+=======
+{include file="headerTemporal.tpl"}
+>>>>>>> 1598ff8d0e593bf990d2546fb2232218d5275828
   <body>
   <div class="container-fluid">
     <table class="table table-hover">
@@ -6,8 +10,8 @@
           <tr>
                   <th scope="col">Nombre</th>
                   <th scope="col">Procedencia</th>
-                  <th scope="col">Equipo</th>
-                  <th scope="col">Id jugador </th>
+                  <th scope="col">Id jugador</th>
+                  <th scope="col">Equipo </th>
                   <th scope="col"> </th>
                   <th scope="col"> </th>
                   <th scope="col"> </th>

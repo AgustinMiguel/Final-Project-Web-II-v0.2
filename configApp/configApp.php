@@ -23,7 +23,7 @@ class ConfigApp
       'borrar'=> 'TpeController#BorrarEquipo',
       'agregar'=>'TpeController#InsertarEquipo',
       'lista' => 'TpeController#CargarLista',
-      'registro'=> 'TpeController#CargarRegistro',
+      'login'=> 'TpeController#CargarLogin',
       'editar' => 'TpeController#EditarEquipo',
       'update' => 'TpeController#UpdateEquipo',
       'jugadores' => 'TpeController#TablaJugadores',

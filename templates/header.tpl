@@ -26,7 +26,7 @@
           <a class="nav-link" href="jugadores" id="botonLista">All-Star</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="registro" id="botonRegistro">Register</a>
+          <a class="nav-link" href="login" id="botonRegistro">Register</a>
         </li>
       </ul>
     </div>

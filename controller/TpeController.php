@@ -53,8 +53,8 @@
     function CargarLista(){
       $this->view->Lista($this->Titulo);
     }
-    function CargarRegistro(){
-      $this->view->Registro($this->Titulo);
+    function CargarLogin(){
+      $this->view->Login($this->Titulo);
     }
   function EditarEquipo($param){
       $id_equipo = $param[0];

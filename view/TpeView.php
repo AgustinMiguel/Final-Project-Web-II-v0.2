@@ -26,11 +26,11 @@ class TpeView
     $smarty->assign('Titulo',$Titulo);
     $smarty->display('templates/lista.tpl');
   }
-  function Registro($Titulo)
+  function Login($Titulo)
   {
     $smarty = new Smarty();
     $smarty->assign('Titulo',$Titulo);
-    $smarty->display('templates/registro.tpl');
+    $smarty->display('templates/login.tpl');
   }
   function UpdateEquipo($Titulo, $Equipo){
     $smarty = new Smarty();
